@@ -3,4 +3,64 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    
+}
+:root{
+    --background__header: #3f7d20;
+    --background__light: #e5e6e4;
+    --color__out: #b11b1b;
+    --color__int: #023e8a;
+    --color__total: #008000;
+}
+
+body{
+    font-family: 'Poppins';
+    background-color: var(--background__light);
+}
+
+#header{
+    padding: 2rem;
+    background-color: var(--background__header);
+    color: #fff;
+    text-align: center;
+}
+
+#header h1{
+    font-weight: 200;
+}
+
+.finance{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#balance{
+    /* height: 400px;    */
+}
+
+.card{
+    height: 120px;
+    background-color: #fff;
+    margin: 20px auto;
+}
+
+.card h2, p{
+    padding-left: 10px;
+}
+
+.card p{
+    padding-top: 25px;
+    font-size: 1.7rem;
+}
+
+.out p{
+    color: var(--color__out);
+}
+
+.int p{
+    color: var(--color__int)
+}
+
+.total p{
+    color: var(--color__total)
 }
