@@ -18,9 +18,25 @@
     --color__text__dark: #adb5bd;
 }
 
+html{
+    font-size: 93,75%;
+}
+
 body{
     font-family: 'Poppins';
     background-color: var(--background__light);
+}
+
+.sr__only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 #header{
@@ -50,12 +66,16 @@ body{
 
 .card{
     height: 130px;
+    /* width: 215px; */
     background-color: var(--color);
     margin: 20px auto;
     border-radius: 5px;
 }
 
 .card h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 1.5rem 1rem 0;
     font-weight: 300;
     color: var(--dark__color);
@@ -70,8 +90,16 @@ body{
     color: var(--color__out);
 }
 
+.out i{
+    color: var(--color__out);
+}
+
 .int p{
     color: var(--color__int);
+}
+
+.int i{
+    color: #04D361;
 }
 
 .total{
@@ -79,14 +107,13 @@ body{
     color: var(--color);
 }
 
-.total h3{
+.total h3, i{
     color: var(--color);
 }
 
 .data__table{
-    width: 100%;
-    border-spacing: 0 0.7rem;
-    
+    width: 100%; 
+    border-spacing: 0 0.5rem;    
 }
 
 table tbody tr{
@@ -122,4 +149,79 @@ table td{
 #transaction h2{
     font-weight: 300;
     color: var(--dark__color);
+}
+
+a{
+    color: #49aa26;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #3dd705;
+}
+
+.button.new{
+    display:  inline-block;
+    margin-bottom: 0.9rem;
+}
+
+tr i{
+    color: var(--color__out);
+    cursor: pointer
+}
+
+/* =============MODAL==============*/
+.modal__overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    padding: 2.5rem;
+    background-color: #F0F2f5;
+}
+
+
+/* =============RESPONSIVE==============*/
+@media(min-width: 800px){
+    html{
+        font-size: 87.5%;
+    }
+
+    #balance{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .card{
+        width: 240px;
+    }
+}
+
+@media(max-width: 400px){
+    .data__table{
+        display: block;
+        overflow-x: auto;
+    }
+
+    tr i{
+        color: var(--color__out);
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
 }
