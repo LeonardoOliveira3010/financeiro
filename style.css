@@ -8,9 +8,14 @@
 :root{
     --background__header: #3f7d20;
     --background__light: #e5e6e4;
+    --background__dark: #fbfefb;
     --color__out: #b11b1b;
     --color__int: #023e8a;
     --color__total: #008000;
+    --color: #fff;
+    --dark__color: #343a40;
+    --color__text__light: #ced4da;
+    --color__text__dark: #adb5bd;
 }
 
 body{
@@ -19,7 +24,7 @@ body{
 }
 
 #header{
-    padding: 2rem;
+    padding: 2rem 0 6rem;
     background-color: var(--background__header);
     color: #fff;
     text-align: center;
@@ -30,27 +35,35 @@ body{
 }
 
 .finance{
-    width: 80%;
+    width: min(90vw, 800px);
     margin: 0 auto;
 }
 
 #balance{
-    /* height: 400px;    */
+    margin-top: -6rem;
+}
+
+#balance h2{
+    color: var(--color);
+    font-weight: 300;
 }
 
 .card{
-    height: 120px;
-    background-color: #fff;
+    height: 130px;
+    background-color: var(--color);
     margin: 20px auto;
+    border-radius: 5px;
 }
 
-.card h2, p{
-    padding-left: 10px;
+.card h3{
+    padding: 1.5rem 1rem 0;
+    font-weight: 300;
+    color: var(--dark__color);
 }
 
 .card p{
-    padding-top: 25px;
-    font-size: 1.7rem;
+    padding: 1.5rem 1rem 0;
+    font-size: 2rem;
 }
 
 .out p{
@@ -58,9 +71,55 @@ body{
 }
 
 .int p{
-    color: var(--color__int)
+    color: var(--color__int);
 }
 
-.total p{
-    color: var(--color__total)
+.total{
+    background-color: var(--color__total);
+    color: var(--color);
+}
+
+.total h3{
+    color: var(--color);
+}
+
+.data__table{
+    width: 100%;
+    border-spacing: 0 0.7rem;
+    
+}
+
+table tbody tr{
+    background: var(--background__dark);
+    opacity: 0.7;
+    height: 60px;
+    border-radius: 5px;
+}
+
+table tbody tr:hover{
+    color: var(--dark__color);
+    opacity: 1;
+}
+
+table th{
+    background: var(--color);
+    height: 40px;
+    border-radius: 5px;
+    color: var(--dark__color);
+    font-weight: 400;
+    text-align: left;
+    padding-left: 1.5rem;
+}
+
+table td{
+    padding-left: 1.5rem;
+}
+
+#transaction{
+    margin-top: 3rem;
+}
+
+#transaction h2{
+    font-weight: 300;
+    color: var(--dark__color);
 }
