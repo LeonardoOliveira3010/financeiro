@@ -9,37 +9,48 @@
 </head>
 <body> 
     <header id="header">
-        <h1>F$NANCE</h1>
+        <img src="./img/logo.svg" alt="logo finance">
     </header>
 
     <main class="finance">
 
         <section id="balance">
-            <h2>Balanço</h2>
+            <h2 class="sr__only">Balanço</h2>
             <div class="int card">
-                <h3>Entradas</h3>
+                <h3>
+                    <span>Entradas</span>
+                    <i class="fas fa-arrow-circle-up"></i>
+                </h3>
                 <p>R$5000,00</p>
             </div>
             
             <div class="out card">
-                <h3>Saidas</h3>
+                <h3> 
+                    <span>Saidas</span>
+                    <i class="fas fa-arrow-circle-down"></i>
+                </h3>
                 <p>R$400,00</p>
             </div>
 
             <div class="total card">
-                <h3>Total</h3>
+                <h3> 
+                    <span>Total</span>
+                    <i class="fas fa-dollar-sign"></i>
+                </h3>
                 <p>R$4700,00</p>
             </div>
         </section>
 
         <section id="transaction">
-            <h2>Transações</h2>
+            <h2 class="sr__only">Transações</h2>
+            <a href="#" class="button new">+ nova transação</a>
             <table class="data__table">
                 <thead>
                     <tr>
                         <th>Descrição</th>
                         <th>Valor</th>
                         <th>Data</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,18 +58,21 @@
                         <td class="description">Luz</td>
                         <td class="expense">- R$ 150,00</td>
                         <td class="date">10/04/2021</td>
+                        <td><i class="far fa-trash-alt"></i></td>
                     </tr>
 
                     <tr>
                         <td class="description">Aluguel</td>
                         <td class="expense">- R$ 800,00</td>
                         <td class="date">10/04/2021</td>
+                        <td><i class="far fa-trash-alt"></i></td>
                     </tr>
 
                     <tr>
                         <td class="description">Salario</td>
                         <td class="income"> R$ 1500,00</td>
                         <td class="date">10/04/2021</td>
+                        <td><i class="far fa-trash-alt"></i></td>
                     </tr>
                 </tbody>
             </table>
@@ -68,5 +82,42 @@
     <footer>
         <p>criado</p>
     </footer>
+
+    <div class="modal__overlay active">
+        <div class="modal">
+            <div id="form">
+                <h2>Nova transação</h2>
+                <form action="">
+                    <div class="input__group">
+                        <label class="sr__only" for="description">Descrição</label>
+                        <input type="text" name="description" id="description" placeholder="Descrição">
+                    </div>
+
+                    <div class="input__group">
+                        <label class="sr__only" for="amount">Valor</label>
+                        <input type="number" name="amount" id="amount" placeholder="Valor da transação">
+
+                        <small>Use - (negativo) para despesas e, (virgula)  para casas decimais</small>
+                    </div>
+
+                    <div class="input__group">
+                        <label class="sr__only" for="date">Data</label>
+                        <input type="date" name="date" id="date" placeholder="data">
+                    </div>
+
+                    <div class="input__group action">
+                        <a href="#" class="cancelar">Cancelar</a>
+                    </div>
+                    <button>Salvar</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/392610c469.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
