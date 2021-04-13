@@ -189,11 +189,68 @@ tr i{
     visibility: visible;
 }
 
-.modal{
-    padding: 2.5rem;
-    background-color: #F0F2f5;
+.deactivate{
+    opacity: 0;
+    visibility: hidden;
 }
 
+
+
+.modal{
+    padding: 3rem;
+    background-color: #F0F2f5;
+    width: 500px;
+}
+
+.modal h2{
+    text-align: center;
+    font-weight: 400;
+    color: var(--dark__color);
+}
+
+.input__group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input__group input{
+    height: 50px;
+    width: 350px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    padding: 0 1.5rem;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.input__group input:hover{
+    border: 1px solid var(--color__total);
+}
+
+.input__group small{
+    font-size: 0.7rem;
+}
+
+.cancelar{
+    color: #b11b1b;
+}
+
+.cancelar:hover{
+    color: #d92121;
+}
+
+button{
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* =============RESPONSIVE==============*/
 @media(min-width: 800px){
