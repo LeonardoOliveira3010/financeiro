@@ -40,7 +40,7 @@ body{
 }
 
 #header{
-    padding: 2rem 0 6rem;
+    padding: 0 0 6rem;
     background-color: var(--background__header);
     color: #fff;
     text-align: center;
@@ -131,7 +131,7 @@ table tbody tr:hover{
 table th{
     background: var(--color);
     height: 40px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     color: var(--dark__color);
     font-weight: 400;
     text-align: left;
@@ -143,7 +143,7 @@ table td{
 }
 
 #transaction{
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 #transaction h2{
@@ -170,6 +170,15 @@ tr i{
     cursor: pointer
 }
 
+/* =============FOOTER==============*/
+
+footer p{
+    text-align: center;
+    margin: 2rem;
+    color: var(--dark__color);
+    opacity: 0.7;
+}
+
 /* =============MODAL==============*/
 .modal__overlay{
     width: 100%;
@@ -188,13 +197,6 @@ tr i{
     opacity: 1;
     visibility: visible;
 }
-
-.deactivate{
-    opacity: 0;
-    visibility: hidden;
-}
-
-
 
 .modal{
     padding: 3rem;
@@ -223,7 +225,7 @@ tr i{
     border: none;
     padding: 0 1.5rem;
     outline: none;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .input__group input:hover{
@@ -232,27 +234,47 @@ tr i{
 
 .input__group small{
     font-size: 0.7rem;
+    opacity: 0.5;
 }
 
 .cancelar{
     color: #b11b1b;
+    padding: 0.8rem;
+    opacity: 0.7;
 }
 
 .cancelar:hover{
     color: #d92121;
+    opacity: 1;
+}
+
+small{
+    padding: 0.5rem 0;
 }
 
 button{
-    width: 150px;
-    height: 30px;
+    width: 200px;
+    height: 40px;
     cursor: pointer;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #49aa26;
+    border: none;
+    color: var(--color);
+    margin-top: 10px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #3dd705;
+    transition: ease-in-out 0.3s;
 }
 
 /* =============RESPONSIVE==============*/
+
 @media(min-width: 800px){
     html{
         font-size: 87.5%;
@@ -281,4 +303,22 @@ button{
         padding: 0.5rem;
     }
 
+    .modal{
+        width: 90%;
+        padding: 2rem;
+    }
+
+     h2{
+       margin-bottom: 0.5rem;
+    }
+
+    .input__group input{
+        width: 260px;
+    }
+
+    .input__group small{
+        text-align: center;
+        font-size: 0.7rem;
+        width: 90%;
+    }
 }
