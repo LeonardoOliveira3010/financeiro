@@ -1,19 +1,23 @@
 // ==============ATIVAR MODAL=================//
-let newTransaction = document.querySelector('.button')
+const activeModal = () =>{
+    const newTransaction = document.querySelector('.button')
+    const active = document.querySelector('.modal__overlay')
 
-let active = document.querySelector('.modal__overlay')
+    newTransaction.addEventListener('click', () =>{
+        active.classList.toggle('active')
+    })
+}
 
-newTransaction.addEventListener('click', ()=>{
-    active.classList.add('active')
-})
+activeModal()
 
 // =============DESATIVAR MODAL=================//
-let cancelTransaction = document.querySelector('.cancelar')
+const desactiveModal = () =>{
+    const cancelTransaction = document.querySelector('.cancelar')
+    const active = document.querySelector('.modal__overlay')
+    cancelTransaction.addEventListener('click', ()=>{
+        active.classList.toggle('active')
+     })
 
-cancelTransaction.addEventListener('click', ()=>{
-   active.classList.add('deactivate')
-})
+}
 
-// if(newTransaction != 1){
-//     active.classList.add('active')
-// }
+desactiveModal()
