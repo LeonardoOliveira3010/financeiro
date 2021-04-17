@@ -27,6 +27,12 @@ body{
     background-color: var(--background__light);
 }
 
+
+.income{
+    color: var(--color__total);
+    font-weight: 600;
+}
+
 .sr__only{
     position: absolute;
     width: 1px;
@@ -140,6 +146,11 @@ table th{
 
 table td{
     padding-left: 1.5rem;
+}
+
+table tbody .expense{
+    color: var(--color__out);
+    font-weight: 600;
 }
 
 #transaction{
