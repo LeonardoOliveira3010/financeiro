@@ -21,7 +21,7 @@
                     <span>Entradas</span>
                     <i class="fas fa-arrow-circle-up"></i>
                 </h3>
-                <p>R$5000,00</p>
+                <p id="incomeDisplay">R$ 0,00</p>
             </div>
             
             <div class="out card">
@@ -29,7 +29,7 @@
                     <span>Saidas</span>
                     <i class="fas fa-arrow-circle-down"></i>
                 </h3>
-                <p>R$400,00</p>
+                <p id="expenseDisplay">R$ 0,00</p>
             </div>
 
             <div class="total card">
@@ -37,13 +37,13 @@
                     <span>Total</span>
                     <i class="fas fa-dollar-sign"></i>
                 </h3>
-                <p>R$4700,00</p>
+                <p id="totalDisplay">R$ 0,00</p>
             </div>
         </section>
 
         <section id="transaction">
             <h2 class="sr__only">Transações</h2>
-            <a href="#" class="button new">+ nova transação</a>
+            <a href="#" class="button new" onclick="Modal.open()">+ nova transação</a>
             <table class="data__table">
                 <thead>
                     <tr>
@@ -54,6 +54,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    
                     <!-- <tr>
                         <td class="description">Luz</td>
                         <td class="expense">- R$ 150,00</td>
@@ -87,7 +88,7 @@
         <div class="modal ">
             <div id="form">
                 <h2>Nova transação</h2>
-                <form action="">
+                <form action="" onsubmit="Form.submit(event)">
                     <div class="input__group">
                         <label class="sr__only" for="description">Descrição</label>
                         <input autocomplete="off" type="text" name="description" id="description" placeholder="Descrição">
@@ -106,9 +107,9 @@
                     </div>
 
                     <div class="input__group action">
-                        <a href="#" class="cancelar">Cancelar</a>
+                        <a href="#" class="cancelar" onclick="Modal.close()">Cancelar</a>
                     </div>
-                    <button type="submit">Cadastrar</button>
+                    <button accesskey="n" >Cadastrar</button>
                 </form>
                 
             </div>
